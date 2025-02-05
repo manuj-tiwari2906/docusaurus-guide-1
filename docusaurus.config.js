@@ -39,6 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/'
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -62,8 +63,8 @@ const config = {
       navbar: {
         title: 'Unicaps',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Unicaps',
+          src: '/img/logo.svg',
         },
         items: [
           {
