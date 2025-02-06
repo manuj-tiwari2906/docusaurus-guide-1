@@ -108,6 +108,8 @@ Below are the required headers for the API request.
 |------------|-------------|
 | 🟢 **200 OK** | The request was successful, and the payment has been processed. |
 | 🔴 **403 Forbidden** | The request is forbidden. You may need proper credentials or permissions. |
+| 🟡 **400 Invalid Request** | The request could not be processed due to missing or incorrect parameters. |
+| 🔴 **500 Server Error** | An internal server error occurred. Please try again later or contact support. |
 
 
 

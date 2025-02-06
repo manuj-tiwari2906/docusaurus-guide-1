@@ -42,3 +42,7 @@
   border-color: #e6a700;
   background-color: #f9f4e7;
 }
+
+.admonitionHeading_tbUL {
+  display: none;
+}
