@@ -7,15 +7,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Unicaps',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'API Documentation',
   favicon: 'img/favicon.ico',
 
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/docs/',
   trailingSlash: false,
 
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  organizationName: 'unicaps', // Change to your organization
+  projectName: 'unicaps-docs', // Change to your repo name
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,19 +28,16 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),  // Automatically picks the sidebar for api and api-v2
-          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // Ensures that /docs/ serves both versions
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
@@ -55,9 +52,17 @@ const config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'apiSidebar',  // Change this to 'apiSidebar' (for /docs/api) or 'apiV2Sidebar' (for /docs/api-v2)
+          sidebarId: 'apiSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'API v1',
+          to: '/api/', // Ensures clicking "API v1" goes to the right page
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiV2Sidebar',
+          position: 'left',
+          label: 'API v2',
+          to: '/api-v2/', // Ensures clicking "API v2" goes to the right page
         },
       ],
     },
