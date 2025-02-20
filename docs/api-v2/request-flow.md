@@ -12,14 +12,14 @@ keywords: [keywords, describing, the main topics]
 
 ```json
 {
-  "order_id": "ORD1234519",
-  "transaction_amount": "900.00",
-  "customer_id": "CUST7892",
-  "customer_name": "Alice Johnson",
-  "customer_email": "alice.johnson@example.com",
-  "customer_mobile": "9876543210",
-  "payment_method": "IMPS",  
-  "return_url": "https://example.com/return"
+  "order_id": "ORDXXXXX",
+  "transaction_amount": "XXX.XX",
+  "customer_id": "CUSTXXXX",
+  "customer_name": "John Doe",
+  "customer_email": "john.doe@example.com",
+  "customer_mobile": "XXXXXXXXXX",
+  "payment_method": "PAYMENT_METHOD",  
+  "return_url": "https://your-return-url.com"
 }
   ```
 
@@ -59,7 +59,9 @@ Our server processes the request and returns an encrypted response:
 
 ### 5. Decrypt the Response
 
-Once decrypted, the response contains transaction details:
+**IMPS Transaction Response**
+
+This response represents a transaction made using IMPS (Immediate Payment Service), a real-time interbank electronic funds transfer system.
 
 ```json
 {
@@ -67,15 +69,38 @@ Once decrypted, the response contains transaction details:
   "status": "success",
   "statusCode": 200,
   "data": {
-    "transactionId": 3756100239537,
-    "customerOrderId": "ORD1234519",
+    "transactionId": "XXXXXXXXXXXX",
+    "customerOrderId": "ORDXXXXX",
     "mode": "IMPS",
     "status": "PENDING",
-    "merchantName": "Cricket Insomnia",
-    "accountHolderName": "Akash Garments",
-    "accountNumber": "409001974400",
-    "bankName": "RBL BANK LIMITED",
-    "ifsc": "RATN0000519"
+    "merchantName": "Merchant Name",
+    "accountHolderName": "Account Holder",
+    "accountNumber": "XXXXXXXXXXXX",
+    "bankName": "Bank Name",
+    "ifsc": "IFSCXXXXXXX"
+  }
+}
+  ```
+
+  **UPI Transaction Response**
+
+  This response represents a transaction made using UPI (Unified Payments Interface), a real-time payment system that allows instant bank-to-bank transactions.
+
+  ```json
+{
+  "message": "Transaction created",
+  "status": "success",
+  "statusCode": 200,
+  "data": {
+    "transactionId": "XXXXXXXXXXXX",
+    "customerOrderId": "ORDXXXXX",
+    "mode": "UPI",
+    "status": "PENDING",
+    "merchantName": "Merchant Name",
+    "accountHolderName": "Account Holder",
+    "accountNumber": "XXXXXXXXXXXX",
+    "bankName": "Bank Name",
+    "ifsc": "IFSCXXXXXXX"
   }
 }
   ```
