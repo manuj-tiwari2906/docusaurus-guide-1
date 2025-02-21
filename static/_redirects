@@ -1,2 +1,3 @@
-/docs/api    /docs/index.html   200
-/docs/*      /docs/index.html   200
+/docs/api      /docs/api/index.html    200
+/docs/api-v2   /docs/api-v2/index.html 200
+/docs/*        /docs/index.html        200
