@@ -8,7 +8,7 @@ const config = {
   tagline: 'API Documentation',
   favicon: 'img/favicon.ico',
 
-  url: 'https://unicaps.io',
+  url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/docs/',  // ✅ Ensures URLs are correct
   trailingSlash: false,
 
@@ -55,14 +55,14 @@ const config = {
           sidebarId: 'apiSidebar',  // ✅ API v1 Sidebar
           position: 'left',
           label: 'API v1',
-          to: '/api',  // ✅ Links directly to API v1
+          to: '/api/',  // ✅ Links directly to API v1
         },
         {
           type: 'docSidebar',
           sidebarId: 'apiV2Sidebar',  // ✅ API v2 Sidebar
           position: 'left',
           label: 'API v2',
-          to: '/api-v2',  // ✅ Links directly to API v2
+          to: '/api-v2/',  // ✅ Links directly to API v2
         },
       ],
     },
