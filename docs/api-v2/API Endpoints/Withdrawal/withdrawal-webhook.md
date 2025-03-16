@@ -1,6 +1,6 @@
 ---
-title: Webhook
-sidebar_position: 3
+title: Withdrawal Webhook
+sidebar_position: 10
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,6 +17,29 @@ Once a transaction reaches a certain stage (e.g., success or failure), the syste
 ### Webhook Response Explanation
 When a webhook is triggered, you will receive a response with the following structure: 
 
+### Encrypted JSON Payload
+
+Once encrypted, the request format changes to:
+
+```json
+{
+  "mid": "MERCHANT_UNIQUE_ID",
+  "data": "<Encrypted_String>"
+}
+  ```
+
+### Received Encrypted Response
+
+```json
+{
+  "mid": "MERCHANT_UNIQUE_ID",
+  "data": "<Encrypted_Response_String>"
+}
+```
+
+### Decrypted Response 
+
+Once the response is decrypted you will get a response like shown below:
 
 <Tabs groupId="response-type">
 
@@ -43,4 +66,3 @@ When a webhook is triggered, you will receive a response with the following stru
   ```
 </TabItem> 
 </Tabs>
-

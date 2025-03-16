@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout
       >
-        <Redirect to="/api/" />
+        <Redirect to="/docs/api/" />
     </Layout>
   );
 }

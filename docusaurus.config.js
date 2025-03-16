@@ -1,21 +1,19 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/duotoneLight');
 const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Unicaps',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'API Documentation',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://unicaps.io',
+  baseUrl: '/docs/',  // ✅ Ensures URLs are correct
   trailingSlash: false,
 
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  organizationName: 'unicaps', 
+  projectName: 'unicaps-docs', 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -31,7 +29,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: 'docs', // ✅ Ensures /docs/api and /docs/api-v2 work correctly
+          routeBasePath: 'api', // ✅ Ensures /docs/api and /docs/api-v2 work correctly
         },
         blog: {
           showReadingTime: true,
@@ -54,9 +52,17 @@ const config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'apiSidebar',  // Change this to 'apiSidebar' (for /docs/api) or 'apiV2Sidebar' (for /docs/api-v2)
+          sidebarId: 'apiSidebar',  // ✅ API v1 Sidebar
           position: 'left',
-          label: 'Docs',
+          label: 'API v1',
+          to: '/api',  // ✅ Links directly to API v1
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiV2Sidebar',  // ✅ API v2 Sidebar
+          position: 'left',
+          label: 'API v2',
+          to: '/api-v2',  // ✅ Links directly to API v2
         },
       ],
     },
