@@ -8,7 +8,7 @@ const config = {
   tagline: 'API Documentation',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://unicaps.io',
   baseUrl: '/docs/',  // ✅ Ensures URLs are correct
   trailingSlash: false,
 
