@@ -29,7 +29,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: 'api', // ✅ Ensures /docs/api and /docs/api-v2 work correctly
+          routeBasePath: '/', // ✅ Ensures /docs/api and /docs/api-v2 work correctly
         },
         blog: {
           showReadingTime: true,
