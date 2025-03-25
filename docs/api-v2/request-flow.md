@@ -19,7 +19,6 @@ keywords: [keywords, describing, the main topics]
   "customer_email": "john.doe@example.com",
   "customer_mobile": "XXXXXXXXXX",
   "payment_method": "PAYMENT_METHOD",  
-  "return_url": "https://your-return-url.com"
 }
   ```
 
@@ -43,7 +42,7 @@ Send the encrypted JSON payload via **POST** request to:
 **Endpoint:**
 :::info
 **POST**  
-`https://api.unicaps.io/h2h/transaction`
+`https://api.unicaps.io/api/v2/h2h/transaction`
 :::
 
 ### 4. Receive the Encrypted Response
@@ -92,15 +91,16 @@ This response represents a transaction made using IMPS (Immediate Payment Servic
   "status": "success",
   "statusCode": 200,
   "data": {
-    "transactionId": "XXXXXXXXXXXX",
-    "customerOrderId": "ORDXXXXX",
-    "mode": "UPI",
-    "status": "PENDING",
-    "merchantName": "Merchant Name",
-    "accountHolderName": "Account Holder",
-    "accountNumber": "XXXXXXXXXXXX",
-    "bankName": "Bank Name",
-    "ifsc": "IFSCXXXXXXX"
-  }
+      "transactionId": "TRX1234567890",
+      "customerOrderId": "ORD987654321",
+      "qrCode": "upi://pay?pa=merchant@upi&pn=Merchant%20Name&am=100.00&cu=INR",
+      "mode": "UPI",
+      "status": "PENDING",
+      "merchantName": "Merchant Name",
+      "accountHolderName": "Account Holder",
+      "accountNumber": "XXXXXXXXXXXX",
+      "bankName": "Bank Name",
+      "ifsc": "IFSCXXXXXXX"
+    }
 }
   ```

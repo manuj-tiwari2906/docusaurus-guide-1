@@ -49,7 +49,7 @@ Send the encrypted JSON payload via POST request to:
 **Endpoint:**
 :::info
 **POST**  
-`https://api.unicaps.io/h2h/transaction/status`
+`https://api.unicaps.io/api/v2/h2h/transaction/status`
 :::
 
 
