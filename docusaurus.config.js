@@ -9,8 +9,8 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://unicaps.io',
-  baseUrl: '/docs/',  // ✅ Ensures URLs are correct
-  trailingSlash: false,
+  baseUrl: '/docs/',
+  trailingSlash: true,
 
   organizationName: 'unicaps', 
   projectName: 'unicaps-docs', 
@@ -29,11 +29,10 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/', // ✅ Ensures /docs/api and /docs/api-v2 work correctly
+          routeBasePath: '/',
+          path: 'docs',
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -47,22 +46,22 @@ const config = {
       title: 'Unicaps',
       logo: {
         alt: 'Unicaps',
-        src: '/img/logo.svg',
+        src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'apiSidebar',  // ✅ API v1 Sidebar
+          sidebarId: 'apiSidebar',
           position: 'left',
           label: 'API v1',
-          to: '/api/',  // ✅ Links directly to API v1
+          to: '/api',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'apiV2Sidebar',  // ✅ API v2 Sidebar
+          sidebarId: 'apiV2Sidebar',
           position: 'left',
           label: 'API v2',
-          to: '/api-v2/',  // ✅ Links directly to API v2
+          to: '/api-v2',
         },
       ],
     },
